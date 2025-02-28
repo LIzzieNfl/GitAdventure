@@ -1,0 +1,286 @@
+On branch main
+nothing to commit, working tree clean
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % echo "This file is meant to be deleted." >temp.txt
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git add temp.txt
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git commit -m "Prepare temp.txt for deletion"
+[main bad29e4] Prepare temp.txt for deletion
+ 1 file changed, 1 insertion(+)
+ create mode 100644 temp.txt
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git rm temp.txt
+rm 'temp.txt'
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git commit -m "Delete temp.txt"
+[main 4d5e711] Delete temp.txt
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 temp.txt
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git mv journey.txt adventure.txt
+fatal: destination exists, source=journey.txt, destination=adventure.txt
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % echo "My journey evolves into an adventure with Git."> adventure.txt
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git add adventure.txt
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git commit -m "Rename journey.txt to adventure.txt and update content"
+[main 2751df8] Rename journey.txt to adventure.txt and update content
+ 1 file changed, 1 deletion(-)
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % echo "echo "*.log" > .gitignore
+
+dquote> 
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % echo "*.log" > .gitignore
+
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git add .gitignore
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git commit -m "Add .gitignore to ignore log files"
+On branch main
+nothing to commit, working tree clean
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % touch test.log
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git status
+On branch main
+nothing to commit, working tree clean
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % echo "Exploring the depths of Git commands and their powers." >> adventure.txt
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git status -s
+ M adventure.txt
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git add adventure.txt
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git commit -m "Update adventure.txt with exploration insights"
+[main ff88ff1] Update adventure.txt with exploration insights
+ 1 file changed, 1 insertion(+)
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git log --online --reverse
+fatal: unrecognized argument: --online
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git restore --source=<commit_id> adventure.txt
+zsh: no such file or directory: commit_id
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git add adventure.txt
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git commit -m "Revert adventure.txt to its initial state"
+On branch main
+nothing to commit, working tree clean
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % cd ..
+elizabeth.daly@FS-Mac-Elizabeth ~ % cd ..
+
+elizabeth.daly@FS-Mac-Elizabeth /Users % zip -r GitAdventure.zip GitAdventure
+
+	zip warning: name not matched: GitAdventure
+
+zip error: Nothing to do! (try: zip -r GitAdventure.zip . -i GitAdventure)
+elizabeth.daly@FS-Mac-Elizabeth /Users % pwd
+/Users
+elizabeth.daly@FS-Mac-Elizabeth /Users % ls
+Shared		elizabeth.daly	hadmin
+elizabeth.daly@FS-Mac-Elizabeth /Users % mv journey.txt ~/Desktop/
+mv: rename journey.txt to /Users/elizabeth.daly/Desktop/journey.txt: No such file or directory
+elizabeth.daly@FS-Mac-Elizabeth /Users % cls
+zsh: command not found: cls
+elizabeth.daly@FS-Mac-Elizabeth /Users % clear
+
+elizabeth.daly@FS-Mac-Elizabeth /Users % git init
+/Users/.git: Permission denied
+elizabeth.daly@FS-Mac-Elizabeth /Users % git log --online --reverse
+fatal: not a git repository (or any of the parent directories): .git
+elizabeth.daly@FS-Mac-Elizabeth /Users % git log --oneline --reverse
+fatal: not a git repository (or any of the parent directories): .git
+elizabeth.daly@FS-Mac-Elizabeth /Users % git restore --source=<commit_id> adventure.txt
+
+zsh: no such file or directory: commit_id
+elizabeth.daly@FS-Mac-Elizabeth /Users % git restore --source=2751df8 adventure.txt
+
+fatal: not a git repository (or any of the parent directories): .git
+elizabeth.daly@FS-Mac-Elizabeth /Users % git log --oneline
+fatal: not a git repository (or any of the parent directories): .git
+elizabeth.daly@FS-Mac-Elizabeth /Users % cd /Users/elizabeth.daly/GitAdventure
+
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % mv journey.txt ~/Desktop/
+
+mv: journey.txt: No such file or directory
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % mv journey.txt ~/Desktop/
+
+mv: journey.txt: No such file or directory
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % cd /Users/elizabeth.daly/
+zip -r GitAdventure.zip GitAdventure
+
+  adding: GitAdventure/ (stored 0%)
+  adding: GitAdventure/adventure.txt (deflated 16%)
+  adding: GitAdventure/test.log (stored 0%)
+  adding: GitAdventure/.gitignore (stored 0%)
+  adding: GitAdventure/.git/ (stored 0%)
+  adding: GitAdventure/.git/config (deflated 28%)
+  adding: GitAdventure/.git/objects/ (stored 0%)
+  adding: GitAdventure/.git/objects/68/ (stored 0%)
+  adding: GitAdventure/.git/objects/68/f0e9211badf5047e1eb764bc118055e8506813 (stored 0%)
+  adding: GitAdventure/.git/objects/05/ (stored 0%)
+  adding: GitAdventure/.git/objects/05/d884d7600b2659ec9c77a020f446fd78b5c1b0 (stored 0%)
+  adding: GitAdventure/.git/objects/e5/ (stored 0%)
+  adding: GitAdventure/.git/objects/e5/2a64cc13a2d9a47b4d4719ab55627a76ada78f (stored 0%)
+  adding: GitAdventure/.git/objects/e2/ (stored 0%)
+  adding: GitAdventure/.git/objects/e2/20f90568a0898b133df3d13c7172656d20e534 (stored 0%)
+  adding: GitAdventure/.git/objects/ed/ (stored 0%)
+  adding: GitAdventure/.git/objects/ed/8dc13e7bc1d8dbec81838315fc4aaba774dedb (stored 0%)
+  adding: GitAdventure/.git/objects/c1/ (stored 0%)
+  adding: GitAdventure/.git/objects/c1/ddfec94c2a82d5aa1ad305660d98044acb5f82 (stored 0%)
+  adding: GitAdventure/.git/objects/27/ (stored 0%)
+  adding: GitAdventure/.git/objects/27/51df82d614239f879331571c8c9f56bef9ea65 (stored 0%)
+  adding: GitAdventure/.git/objects/pack/ (stored 0%)
+  adding: GitAdventure/.git/objects/11/ (stored 0%)
+  adding: GitAdventure/.git/objects/11/80e246cf2ca90516a6b5982b255c1ad39f853b (stored 0%)
+  adding: GitAdventure/.git/objects/16/ (stored 0%)
+  adding: GitAdventure/.git/objects/16/96a7cbd9803130fb3d09b753a353f3b6dcf390 (stored 0%)
+  adding: GitAdventure/.git/objects/80/ (stored 0%)
+  adding: GitAdventure/.git/objects/80/e9030b3947e495eb3839f50b69ca7b284ecf63 (stored 0%)
+  adding: GitAdventure/.git/objects/17/ (stored 0%)
+  adding: GitAdventure/.git/objects/17/af0235541a09e983d26f5a69e3c6ac90f7528f (stored 0%)
+  adding: GitAdventure/.git/objects/7b/ (stored 0%)
+  adding: GitAdventure/.git/objects/7b/7488638d76863ab019b35e8ecc1163ecb944ed (stored 0%)
+  adding: GitAdventure/.git/objects/4d/ (stored 0%)
+  adding: GitAdventure/.git/objects/4d/5e7112ae16dcb17c8382c5118f01c8d22c7385 (stored 0%)
+  adding: GitAdventure/.git/objects/36/ (stored 0%)
+  adding: GitAdventure/.git/objects/36/2eda320fa029f26a7cd81e02c20dd4b3f699e8 (stored 0%)
+  adding: GitAdventure/.git/objects/info/ (stored 0%)
+  adding: GitAdventure/.git/objects/5e/ (stored 0%)
+  adding: GitAdventure/.git/objects/5e/5a3fffb64870451f3bb8ab0516854017cfcce9 (stored 0%)
+  adding: GitAdventure/.git/objects/01/ (stored 0%)
+  adding: GitAdventure/.git/objects/01/f457774a94b28e9a10cd1f18c64cf20f26acc3 (stored 0%)
+  adding: GitAdventure/.git/objects/39/ (stored 0%)
+  adding: GitAdventure/.git/objects/39/7b4a7624e35fa60563a9c03b1213d93f7b6546 (stored 0%)
+  adding: GitAdventure/.git/objects/ba/ (stored 0%)
+  adding: GitAdventure/.git/objects/ba/d29e438e8308edb8abea3991cf38009fb6e50a (stored 0%)
+  adding: GitAdventure/.git/objects/ff/ (stored 0%)
+  adding: GitAdventure/.git/objects/ff/88ff11cbd61bdb98e394379e84c9df7338e3b9 (stored 0%)
+  adding: GitAdventure/.git/objects/ce/ (stored 0%)
+  adding: GitAdventure/.git/objects/ce/55d22bcb2c00647c36339d9f2303d3bb994923 (stored 0%)
+  adding: GitAdventure/.git/objects/ce/c0f64c0e7639ea8619242e69b42815dd5d2507 (stored 0%)
+  adding: GitAdventure/.git/objects/41/ (stored 0%)
+  adding: GitAdventure/.git/objects/41/e34d16732c0028eafe31ba5261c9c6ae1efde8 (stored 0%)
+  adding: GitAdventure/.git/objects/85/ (stored 0%)
+  adding: GitAdventure/.git/objects/85/51f95392600bbe03c61811696b2d19c5571970 (stored 0%)
+  adding: GitAdventure/.git/objects/1c/ (stored 0%)
+  adding: GitAdventure/.git/objects/1c/40c24f19ebf949dbdff801e532efdb929c7a86 (stored 0%)
+  adding: GitAdventure/.git/HEAD (stored 0%)
+  adding: GitAdventure/.git/info/ (stored 0%)
+  adding: GitAdventure/.git/info/exclude (deflated 28%)
+  adding: GitAdventure/.git/logs/ (stored 0%)
+  adding: GitAdventure/.git/logs/HEAD (deflated 71%)
+  adding: GitAdventure/.git/logs/refs/ (stored 0%)
+  adding: GitAdventure/.git/logs/refs/heads/ (stored 0%)
+  adding: GitAdventure/.git/logs/refs/heads/main (deflated 71%)
+  adding: GitAdventure/.git/description (deflated 14%)
+  adding: GitAdventure/.git/hooks/ (stored 0%)
+  adding: GitAdventure/.git/hooks/commit-msg.sample (deflated 44%)
+  adding: GitAdventure/.git/hooks/pre-rebase.sample (deflated 59%)
+  adding: GitAdventure/.git/hooks/sendemail-validate.sample (deflated 58%)
+  adding: GitAdventure/.git/hooks/pre-commit.sample (deflated 45%)
+  adding: GitAdventure/.git/hooks/applypatch-msg.sample (deflated 42%)
+  adding: GitAdventure/.git/hooks/fsmonitor-watchman.sample (deflated 62%)
+  adding: GitAdventure/.git/hooks/pre-receive.sample (deflated 40%)
+  adding: GitAdventure/.git/hooks/prepare-commit-msg.sample (deflated 50%)
+  adding: GitAdventure/.git/hooks/post-update.sample (deflated 27%)
+  adding: GitAdventure/.git/hooks/pre-merge-commit.sample (deflated 39%)
+  adding: GitAdventure/.git/hooks/pre-applypatch.sample (deflated 38%)
+  adding: GitAdventure/.git/hooks/pre-push.sample (deflated 49%)
+  adding: GitAdventure/.git/hooks/update.sample (deflated 68%)
+  adding: GitAdventure/.git/hooks/push-to-checkout.sample (deflated 55%)
+  adding: GitAdventure/.git/refs/ (stored 0%)
+  adding: GitAdventure/.git/refs/heads/ (stored 0%)
+  adding: GitAdventure/.git/refs/heads/main (stored 0%)
+  adding: GitAdventure/.git/refs/tags/ (stored 0%)
+  adding: GitAdventure/.git/index (deflated 22%)
+  adding: GitAdventure/.git/COMMIT_EDITMSG (stored 0%)
+elizabeth.daly@FS-Mac-Elizabeth ~ % ls
+ first.html			ElizabethCVCSS.CSS		Pictures
+Applications			GitAdventure			Public
+Caesars Cipher			GitAdventure.zip		USF
+Desktop				GroupShare			caesar.html
+DigitalCV.CSS			Library				iCloud Drive (Archive)
+Documents			Movies				iCloud Drive (Archive) - 1
+Downloads			Music				img.jpg
+ElizabethCV.html		MyDigitalCv.html		testaware.var
+elizabeth.daly@FS-Mac-Elizabeth ~ % cd /Users/elizabeth.daly/GitAdventure
+
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git init
+Reinitialized existing Git repository in /Users/elizabeth.daly/GitAdventure/.git/
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git checkout -b branching-exercise
+Switched to a new branch 'branching-exercise'
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git add . && git commit -m "Add all changes" && git push origin main
+
+[branching-exercise 4d9c96c] Add all changes
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 journey.txt
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % nano commit_push.sh
+
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % chmod +x commit_push.sh
+
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % ./commit_push.sh
+
+[branching-exercise a465161] Add all changes
+ 1 file changed, 6 insertions(+)
+ create mode 100755 commit_push.sh
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git remote -v
+
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git remote add origin <your-remote-url>
+
+zsh: parse error near `\n'
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git remote add origin https://github.com/yourusername/GitAdventure.git
+
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git push -u origin branching-exercise
+
+Username for 'https://github.com': cd /Users/elizabeth.daly/GitAdventure
+Password for 'https://cd%20%2FUsers%2Felizabeth.daly%2FGitAdventure@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/yourusername/GitAdventure.git/'
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git init
+
+Reinitialized existing Git repository in /Users/elizabeth.daly/GitAdventure/.git/
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git remote add origin https://github.com/LIzzieNfl/GitAdventure.git
+
+error: remote origin already exists.
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git remote -v
+
+origin	https://github.com/yourusername/GitAdventure.git (fetch)
+origin	https://github.com/yourusername/GitAdventure.git (push)
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git add .
+
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git commit -m "Trying to submit..still learning" 
+On branch branching-exercise
+nothing to commit, working tree clean
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git push -u origin main
+
+Username for 'https://github.com': git remote set-url origin https://github.com/LIzzieNfl/GitAdventure.git
+Password for 'https://git%20remote%20set-url%20origin%20https%3A%2F%2Fgithub.com%2FLIzzieNfl%2FGitAdventure.git@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/yourusername/GitAdventure.git/'
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git remote set-url origin https://<your-username>:<your-token>@github.com/<your-username>/<your-repository>.git
+
+zsh: no such file or directory: your-username
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git remote set-url origin https://<your-username>:<your-token>@github.com/<your-username>/<your-repository>.git
+git remote set-url origin https://<your-username>:<your-token>@github.com/<your-username>/<your-repository>.git
+
+zsh: no such file or directory: your-username
+zsh: no such file or directory: your-username
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git remote set-url origin https://<your-username>:<your-token>@github.com/<your-username>/<your-repository>.git
+
+zsh: no such file or directory: your-username
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git remote set-url origin https://LizzieNfl:<your-token>@github.com/LizzieNfl/GitAdventure.git
+
+zsh: no such file or directory: your-token
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git push -u origin main
+
+Username for 'https://github.com': git status
+Password for 'https://git%20status@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/yourusername/GitAdventure.git/'
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git add GitAdventure.zip
+
+fatal: pathspec 'GitAdventure.zip' did not match any files
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git commit -m "Add GitAdventure.zip"
+
+On branch branching-exercise
+nothing to commit, working tree clean
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % git push origin main
+
+Username for 'https://github.com': ls
+Password for 'https://ls@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/yourusername/GitAdventure.git/'
+elizabeth.daly@FS-Mac-Elizabeth GitAdventure % 
